@@ -13,242 +13,197 @@
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="4" y="8" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/>
-                        <rect x="36" y="15" width="4" height="10" rx="1" fill="currentColor"/>
-                        <rect x="10" y="14" width="4" height="12" rx="1" fill="currentColor" opacity="0.9"/>
-                        <rect x="18" y="11" width="4" height="18" rx="1" fill="currentColor" opacity="0.7"/>
-                        <rect x="26" y="13" width="4" height="14" rx="1" fill="currentColor" opacity="0.5"/>
-                    </svg>
-                    <span class="logo-text">INITION</span>
-                </div>
-                <div class="nav-links">
-                    <a href="#technology" class="nav-link">Technology</a>
-                    <a href="#benefits" class="nav-link">Benefits</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#faq" class="nav-link">FAQ</a>
-                    <a href="#contact" class="nav-link nav-cta">Get in Touch</a>
-                </div>
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="/" class="header-logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="8" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/>
+                    <rect x="36" y="15" width="4" height="10" rx="1" fill="currentColor"/>
+                    <rect x="10" y="14" width="4" height="12" rx="1" fill="currentColor" opacity="0.9"/>
+                    <rect x="18" y="11" width="4" height="18" rx="1" fill="currentColor" opacity="0.7"/>
+                    <rect x="26" y="13" width="4" height="14" rx="1" fill="currentColor" opacity="0.5"/>
+                </svg>
+                <span class="logo-text">INITION</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#technology" class="nav-link">Technology</a>
+                <a href="#benefits" class="nav-link">Benefits</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="mailto:contact@inition.energy" class="btn-pill btn-pill-dark">Get in Touch</a>
             </div>
-        </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
     </header>
 
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="#technology" class="mobile-link">Technology</a>
+            <a href="#benefits" class="mobile-link">Benefits</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#faq" class="mobile-link">FAQ</a>
+            <a href="mailto:contact@inition.energy" class="mobile-link mobile-cta">Get in Touch</a>
+        </nav>
+    </div>
+
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-particles" id="heroParticles"></div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-eyebrow">Patented Electrode Technology</div>
-                <h1 class="hero-title">
-                    Creating the next generation of
-                    <span class="gradient-text">high performance batteries</span>
-                </h1>
-                <p class="hero-description">
-                    Our patented controlled structure electrode production technology redefines how lithium-ion batteries are made &mdash; reducing costs by 46%, boosting energy density 20%+, and eliminating toxic solvents entirely.
-                </p>
-                <div class="hero-cta">
-                    <a href="#technology" class="btn btn-primary">
-                        Explore Our Technology
-                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="#about" class="btn btn-secondary">Our Mission</a>
-                </div>
+    <section class="hero" id="hero">
+        <canvas class="hero-particles" id="heroCanvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-logo-mark">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="16" width="64" height="48" rx="6" stroke="currentColor" stroke-width="3"/>
+                    <rect x="72" y="30" width="8" height="20" rx="2" fill="currentColor"/>
+                    <rect x="20" y="28" width="8" height="24" rx="2" fill="currentColor" opacity="0.9"/>
+                    <rect x="36" y="22" width="8" height="36" rx="2" fill="currentColor" opacity="0.7"/>
+                    <rect x="52" y="26" width="8" height="28" rx="2" fill="currentColor" opacity="0.5"/>
+                </svg>
             </div>
-            <div class="hero-visual-simple">
-                <div class="hero-badge">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor" opacity="0.3"/>
-                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="1.5"/>
-                    </svg>
-                    <span>Chemistry Agnostic &bull; Zero Toxic Solvents</span>
-                </div>
+            <h1 class="hero-title">
+                <span class="hero-title-main">Experience the next generation</span>
+                <span class="hero-title-sub">of high performance batteries</span>
+            </h1>
+            <div class="hero-buttons">
+                <a href="#technology" class="btn-pill btn-pill-dark">
+                    Explore Technology
+                </a>
+                <a href="#about" class="btn-pill btn-pill-ghost">
+                    Our Mission
+                </a>
             </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
         </div>
     </section>
 
-    <!-- Technology Overview Section -->
+    <!-- Statement Section (typing effect) -->
+    <section class="statement-section" id="statement">
+        <div class="statement-inner">
+            <p class="typing-text" id="typingText">INITION's patented electrode technology redefines battery manufacturing — reducing costs by 46%, boosting energy density 20%+, and eliminating toxic solvents entirely.</p>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
     <section id="technology" class="technology-section">
-        <div class="technology-container">
-            <div class="technology-header">
-                <h2 class="section-title">How Our Technology Works</h2>
-                <p class="section-description">
-                    A patented controlled structure electrode production process that transforms battery manufacturing from the ground up.
-                </p>
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-eyebrow">How It Works</h2>
+                <p class="section-title-large">A patented process that transforms battery manufacturing from the ground up.</p>
             </div>
-            <div class="technology-visual">
-                <div class="tech-process">
-                    <div class="tech-step">
-                        <div class="tech-step-number">01</div>
-                        <div class="tech-step-content">
-                            <h3>Controlled Structure</h3>
-                            <p>Our patented process creates precisely engineered electrode structures without traditional wet-coating methods.</p>
-                        </div>
-                    </div>
-                    <div class="tech-step-connector"></div>
-                    <div class="tech-step">
-                        <div class="tech-step-number">02</div>
-                        <div class="tech-step-content">
-                            <h3>Solvent-Free Production</h3>
-                            <p>Eliminates toxic NMP solvents and avoids PFAS entirely, making the process safe and sustainable.</p>
-                        </div>
-                    </div>
-                    <div class="tech-step-connector"></div>
-                    <div class="tech-step">
-                        <div class="tech-step-number">03</div>
-                        <div class="tech-step-content">
-                            <h3>Higher Performance</h3>
-                            <p>Delivers 20%+ energy density gains and improved fast-charging capabilities in the finished cells.</p>
-                        </div>
-                    </div>
+            <div class="tech-steps">
+                <div class="tech-card">
+                    <div class="tech-card-number">01</div>
+                    <h3 class="tech-card-title">Controlled Structure</h3>
+                    <p class="tech-card-desc">Our patented process creates precisely engineered electrode structures without traditional wet-coating methods.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-card-number">02</div>
+                    <h3 class="tech-card-title">Solvent-Free Production</h3>
+                    <p class="tech-card-desc">Eliminates toxic NMP solvents and avoids PFAS entirely, making the process safe and sustainable.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-card-number">03</div>
+                    <h3 class="tech-card-title">Higher Performance</h3>
+                    <p class="tech-card-desc">Delivers 20%+ energy density gains and improved fast-charging capabilities in the finished cells.</p>
                 </div>
             </div>
-            <div class="technology-highlights">
-                <div class="tech-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>No PFAS Required</span>
-                </div>
-                <div class="tech-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>Works With Any Chemistry</span>
-                </div>
-                <div class="tech-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>Decarbonised Process</span>
-                </div>
+            <div class="tech-badges">
+                <span class="badge">No PFAS Required</span>
+                <span class="badge">Works With Any Chemistry</span>
+                <span class="badge">Decarbonised Process</span>
             </div>
         </div>
     </section>
 
     <!-- Benefits Section -->
-    <section id="benefits" class="features">
-        <div class="features-container">
+    <section id="benefits" class="benefits-section">
+        <div class="section-container">
             <div class="section-header">
-                <h2 class="section-title">Redefining Battery Manufacturing</h2>
-                <p class="section-description">
-                    Breakthrough advantages that make green, profitable battery production a reality
+                <h2 class="section-eyebrow">Advantages</h2>
+                <p class="section-title-large">
+                    <span class="gradient-text-blue">Everything you need to manufacture better.</span>
                 </p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2V6M12 18V22M6 12H2M22 12H18M19.07 4.93L16.24 7.76M7.76 16.24L4.93 19.07M19.07 19.07L16.24 16.24M7.76 7.76L4.93 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <div class="benefits-grid">
+                <div class="benefit-card benefit-wide">
+                    <div class="benefit-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M12 2V6M12 18V22M6 12H2M22 12H18M19.07 4.93L16.24 7.76M7.76 16.24L4.93 19.07M19.07 19.07L16.24 16.24M7.76 7.76L4.93 4.93"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">46% Cost Reduction</h3>
-                    <p class="feature-description">
-                        Dramatically reduce cell production costs in high performance markets, making advanced battery technology economically viable for a broader range of manufacturers.
-                    </p>
+                    <h3>46% Cost Reduction</h3>
+                    <p>Dramatically reduce cell production costs in high performance markets, making advanced battery technology economically viable for a broader range of manufacturers.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor"/>
-                        </svg>
+                <div class="benefit-card">
+                    <div class="benefit-icon-wrap icon-purple">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/></svg>
                     </div>
-                    <h3 class="feature-title">20%+ Energy Density</h3>
-                    <p class="feature-description">
-                        Increase energy density by over 20% compared to conventional methods, while simultaneously improving fast-charging capabilities for high-performance applications.
-                    </p>
+                    <h3>20%+ Energy Density</h3>
+                    <p>Increase energy density by over 20% compared to conventional methods, while improving fast-charging capabilities.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M3 9H21M9 21V9" stroke="currentColor" stroke-width="2"/>
-                        </svg>
+                <div class="benefit-card">
+                    <div class="benefit-icon-wrap icon-blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9H21M9 21V9"/></svg>
                     </div>
-                    <h3 class="feature-title">10x Smaller Footprint</h3>
-                    <p class="feature-description">
-                        Shrink the factory space needed for electrode production by a factor of 10, enabling battery manufacturing in locations that were previously impossible.
-                    </p>
+                    <h3>10x Smaller Footprint</h3>
+                    <p>Shrink factory space for electrode production by 10x, enabling manufacturing in previously impossible locations.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M8 12L10.5 14.5L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                <div class="benefit-card benefit-wide">
+                    <div class="benefit-icon-wrap icon-green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M8 12L10.5 14.5L16 9"/></svg>
                     </div>
-                    <h3 class="feature-title">Zero Toxic Solvents</h3>
-                    <p class="feature-description">
-                        Completely eliminates the use of toxic NMP solvents and avoids PFAS entirely. A truly clean manufacturing process with no harmful chemical byproducts.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2H6C4.9 2 4 2.9 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 15L12 12L15 15M12 12V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Chemistry Agnostic</h3>
-                    <p class="feature-description">
-                        Our technology works with any battery chemistry, giving manufacturers the flexibility to choose the best materials for their specific application needs.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Green Manufacturing</h3>
-                    <p class="feature-description">
-                        Decarbonise the entire electrode manufacturing process. Enable truly green and profitable battery production without the heavy environmental costs traditionally involved.
-                    </p>
+                    <h3>Zero Toxic Solvents</h3>
+                    <p>Completely eliminates toxic NMP solvents and avoids PFAS entirely. A truly clean manufacturing process with no harmful chemical byproducts.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-container">
-            <div class="about-content">
-                <h2 class="section-title">Our Mission</h2>
-                <p class="about-text">
-                    At INITION, we've developed a patented controlled structure electrode production technology that redefines how lithium-ion batteries are made. Our solution doesn't just improve one metric &mdash; it transforms the entire manufacturing equation.
-                </p>
-                <p class="about-text">
-                    This technology not only decarbonises the manufacturing process but also opens the door for a broader range of industries to adopt battery production. From emerging manufacturers to established verticals, INITION makes it feasible to build batteries without the heavy environmental or financial costs traditionally involved.
-                </p>
-                <p class="about-text about-mission">
-                    Our mission is to accelerate the creation of the most energy-dense cell on the market by enabling truly green and profitable battery manufacturing for verticals.
-                </p>
+    <!-- About / Mission Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-eyebrow">Our Mission</h2>
+                    <p class="about-lead">Accelerating the creation of the most energy-dense cell on the market.</p>
+                    <p class="about-body">At INITION, we've developed a patented controlled structure electrode production technology that redefines how lithium-ion batteries are made. Our solution doesn't just improve one metric — it transforms the entire manufacturing equation.</p>
+                    <p class="about-body">This technology not only decarbonises the manufacturing process but also opens the door for a broader range of industries to adopt battery production.</p>
+                </div>
                 <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">46%</div>
-                        <div class="stat-label">Cost Reduction</div>
+                    <div class="stat-card">
+                        <span class="stat-value" data-target="46" data-suffix="%">0%</span>
+                        <span class="stat-label">Cost Reduction</span>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">20%+</div>
-                        <div class="stat-label">Energy Density Gain</div>
+                    <div class="stat-card">
+                        <span class="stat-value" data-target="20" data-suffix="%+">0%+</span>
+                        <span class="stat-label">Energy Density</span>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">10x</div>
-                        <div class="stat-label">Smaller Factory</div>
+                    <div class="stat-card">
+                        <span class="stat-value" data-target="10" data-suffix="x">0x</span>
+                        <span class="stat-label">Smaller Factory</span>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">0</div>
-                        <div class="stat-label">Toxic Solvents</div>
+                    <div class="stat-card">
+                        <span class="stat-value" data-target="0" data-suffix="">0</span>
+                        <span class="stat-label">Toxic Solvents</span>
                     </div>
                 </div>
             </div>
@@ -256,124 +211,65 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <div class="faq-container">
+    <section id="faq" class="faq-section">
+        <div class="section-container">
             <div class="section-header">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-description">
-                    Learn more about INITION's electrode technology and how it's transforming battery manufacturing
-                </p>
+                <h2 class="section-eyebrow">FAQ</h2>
+                <p class="section-title-large">Common questions about our technology</p>
             </div>
-            <div class="faq-grid">
+            <div class="faq-list">
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>What is INITION's core technology?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9L12 16L5 9"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>
-                            INITION has developed a patented controlled structure electrode production technology for lithium-ion batteries. This process fundamentally changes how electrodes are manufactured, eliminating the need for toxic solvents like NMP while achieving superior cell performance in terms of energy density and fast-charging capabilities.
-                        </p>
+                        <p>INITION has developed a patented controlled structure electrode production technology for lithium-ion batteries. This process fundamentally changes how electrodes are manufactured, eliminating the need for toxic solvents like NMP while achieving superior cell performance in terms of energy density and fast-charging capabilities.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>How does INITION reduce production costs by 46%?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9L12 16L5 9"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>
-                            The cost savings come from multiple factors: eliminating expensive toxic solvents and their recovery systems, dramatically reducing factory space requirements by a factor of 10, simplifying the production process, and lowering energy consumption. These combined efficiencies result in over 46% reduction in cell production costs for high performance markets.
-                        </p>
+                        <p>The cost savings come from multiple factors: eliminating expensive toxic solvents and their recovery systems, dramatically reducing factory space requirements by a factor of 10, simplifying the production process, and lowering energy consumption. These combined efficiencies result in over 46% reduction in cell production costs for high performance markets.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>What does "chemistry agnostic" mean?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9L12 16L5 9"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>
-                            Being chemistry agnostic means our electrode production technology works with any lithium-ion battery chemistry &mdash; whether it's NMC, LFP, NCA, solid-state, or emerging chemistries. Manufacturers aren't locked into a specific material system and can choose the optimal chemistry for their application.
-                        </p>
+                        <p>Being chemistry agnostic means our electrode production technology works with any lithium-ion battery chemistry — whether it's NMC, LFP, NCA, solid-state, or emerging chemistries. Manufacturers aren't locked into a specific material system and can choose the optimal chemistry for their application.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>How does the technology eliminate toxic solvents?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9L12 16L5 9"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>
-                            Traditional electrode manufacturing relies on NMP (N-Methyl-2-pyrrolidone), a toxic and expensive solvent that requires costly recovery systems. INITION's patented dry-process technology produces electrodes without any solvents, and importantly, without relying on PFAS (per- and polyfluoroalkyl substances) as alternatives. This makes the entire process safer and more environmentally friendly.
-                        </p>
+                        <p>Traditional electrode manufacturing relies on NMP (N-Methyl-2-pyrrolidone), a toxic and expensive solvent that requires costly recovery systems. INITION's patented dry-process technology produces electrodes without any solvents, and importantly, without relying on PFAS as alternatives.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>What industries can benefit from INITION's technology?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9L12 16L5 9"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>
-                            Our technology opens battery production to a much broader range of industries. From emerging battery manufacturers looking to enter the market, to established players in automotive, energy storage, consumer electronics, and aerospace. The reduced factory footprint and elimination of toxic materials make it feasible for organisations that previously couldn't justify the environmental or financial costs of battery production.
-                        </p>
+                        <p>Our technology opens battery production to a much broader range of industries. From emerging battery manufacturers to established players in automotive, energy storage, consumer electronics, and aerospace. The reduced factory footprint and elimination of toxic materials make it feasible for organisations that previously couldn't justify the costs.</p>
                     </div>
                 </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>How does INITION improve energy density by 20%?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            Our controlled structure electrode technology enables precise engineering of the electrode microstructure. This optimised architecture allows more active material to be packed effectively, reducing inactive components and improving ion transport pathways. The result is cells with over 20% higher energy density and improved fast-charging performance compared to conventionally manufactured electrodes.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>What is INITION's environmental impact?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            INITION's technology decarbonises the battery manufacturing process by eliminating toxic solvents and their associated energy-intensive recovery systems, reducing factory space (and therefore construction impact) by 10x, and lowering overall energy consumption. This enables truly green battery manufacturing that aligns with global sustainability goals.
-                        </p>
-                    </div>
-                </div>
-
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>Is the technology proven and patented?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9L12 16L5 9"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>
-                            Yes, INITION's controlled structure electrode production technology is fully patented. Our approach has been developed and validated to deliver the performance improvements we describe &mdash; including the 46% cost reduction, 20%+ energy density gains, and complete elimination of toxic solvents in the electrode manufacturing process.
-                        </p>
+                        <p>Yes, INITION's controlled structure electrode production technology is fully patented. Our approach has been developed and validated to deliver the performance improvements we describe — including the 46% cost reduction, 20%+ energy density gains, and complete elimination of toxic solvents.</p>
                     </div>
                 </div>
             </div>
@@ -381,26 +277,22 @@
     </section>
 
     <!-- CTA Section -->
-    <section id="contact" class="cta">
-        <div class="cta-container">
+    <section id="contact" class="cta-section">
+        <div class="cta-inner">
             <h2 class="cta-title">Ready to transform battery manufacturing?</h2>
-            <p class="cta-description">
-                Join the next generation of battery manufacturers building high-performance cells with truly green, cost-effective production.
-            </p>
-            <a href="mailto:contact@inition.energy" class="btn btn-primary btn-large">
+            <p class="cta-desc">Join the next generation of battery manufacturers building high-performance cells with truly green, cost-effective production.</p>
+            <a href="mailto:contact@inition.energy" class="btn-pill btn-pill-white">
                 Get in Touch
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12H19M19 12L12 5M19 12L12 19"/></svg>
             </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-column">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
                     <div class="footer-logo">
                         <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="4" y="8" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/>
@@ -411,35 +303,41 @@
                         </svg>
                         <span class="logo-text">INITION</span>
                     </div>
-                    <p class="footer-description">
-                        Creating the next generation of high-performance batteries through patented electrode production technology.
-                    </p>
                 </div>
-                <div class="footer-column">
-                    <h3 class="footer-heading">Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="#technology" class="footer-link">Technology</a></li>
-                        <li><a href="#benefits" class="footer-link">Benefits</a></li>
-                        <li><a href="#about" class="footer-link">About</a></li>
-                        <li><a href="#faq" class="footer-link">FAQ</a></li>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h3 class="footer-heading">Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
-                        <li><a href="#" class="footer-link">Terms of Service</a></li>
-                        <li><a href="#contact" class="footer-link">Contact Us</a></li>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:contact@inition.energy">contact@inition.energy</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 INITION. All rights reserved.</p>
+                <span>&copy; 2025 INITION. All rights reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
