@@ -1,5 +1,5 @@
 // ===================================
-// Google Antigravity Clone - Main JavaScript
+// INITION - Main JavaScript
 // ===================================
 
 (function() {
@@ -13,10 +13,10 @@
         if (!container) return;
 
         const colors = [
-            'rgba(66, 133, 244, 0.15)',
-            'rgba(52, 168, 83, 0.12)',
-            'rgba(251, 188, 4, 0.1)',
-            'rgba(234, 67, 53, 0.1)'
+            'rgba(0, 137, 123, 0.12)',
+            'rgba(0, 191, 165, 0.10)',
+            'rgba(0, 230, 118, 0.08)',
+            'rgba(77, 182, 172, 0.10)'
         ];
 
         const createRing = () => {
@@ -91,7 +91,7 @@
             const currentScroll = window.pageYOffset;
 
             if (currentScroll > 10) {
-                header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
+                header.style.boxShadow = '0 2px 8px rgba(10, 37, 64, 0.08)';
             } else {
                 header.style.boxShadow = 'none';
             }
@@ -136,13 +136,22 @@
             observer.observe(item);
         });
 
-        // Observe video section
-        const videoSection = document.querySelector('.video-container-wrapper');
-        if (videoSection) {
-            videoSection.style.opacity = '0';
-            videoSection.style.transform = 'translateY(30px)';
-            videoSection.style.transition = 'all 0.8s ease-out';
-            observer.observe(videoSection);
+        // Observe technology steps
+        const techSteps = document.querySelectorAll('.tech-step');
+        techSteps.forEach((step, index) => {
+            step.style.opacity = '0';
+            step.style.transform = 'translateY(30px)';
+            step.style.transition = 'all 0.6s ease-out ' + (index * 0.2) + 's';
+            observer.observe(step);
+        });
+
+        // Observe technology section
+        const techSection = document.querySelector('.technology-container');
+        if (techSection) {
+            techSection.style.opacity = '0';
+            techSection.style.transform = 'translateY(30px)';
+            techSection.style.transition = 'all 0.8s ease-out';
+            observer.observe(techSection);
         }
     };
 
@@ -187,7 +196,7 @@
                     } else if (target.includes('K')) {
                         counter.textContent = Math.ceil(current) + 'K' + (isPlus ? '+' : '');
                     } else if (isPercentage) {
-                        counter.textContent = current.toFixed(0) + '%';
+                        counter.textContent = current.toFixed(0) + '%' + (isPlus ? '+' : '');
                     } else if (isMultiplier) {
                         counter.textContent = current.toFixed(0) + 'x';
                     } else {
@@ -263,13 +272,6 @@
     // Accessibility Enhancements
     // ===================================
     const enhanceAccessibility = () => {
-        const videoPlayer = document.querySelector('#demoVideo');
-        if (videoPlayer) {
-            videoPlayer.setAttribute('tabindex', '0');
-            videoPlayer.setAttribute('role', 'region');
-            videoPlayer.setAttribute('aria-label', 'Antigravity AI demonstration video');
-        }
-
         const nav = document.querySelector('.nav');
         if (nav) {
             nav.setAttribute('role', 'navigation');
